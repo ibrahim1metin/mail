@@ -7,10 +7,10 @@ class mail():
     def __init__(self,user,password,to1,subject,text):
         self.user=user
         self.password=password
+        self.text=text
         self.message_body = MIMEText(self.text, "plain")
         self.to1=to1
         self.subject=subject
-        self.text=text
         self.mail = smtplib.SMTP("smtp.gmail.com", 587)
         self.mail.ehlo()
         self.mail.starttls()
