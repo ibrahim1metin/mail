@@ -26,7 +26,7 @@ class mail():
             self.mail.close()
         except:
             print("An error occured")
-    def dosyaekle(self,file,file_name):
+    def add_file(self,file,file_name):
         part = MIMEBase('application', "octet-stream")
         part.set_payload(open(file, "rb").read())
         encoders.encode_base64(part)
